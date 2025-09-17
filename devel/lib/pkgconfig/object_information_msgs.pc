@@ -1,0 +1,8 @@
+prefix=/home/wxq/tcp_client_ws/devel
+
+Name: object_information_msgs
+Description: Description of object_information_msgs
+Version: 0.0.0
+Cflags: -I/home/wxq/tcp_client_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs
