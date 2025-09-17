@@ -1,0 +1,24 @@
+<launch>
+    <!-- ---------------- TCP Server ---------------- -->
+    <!-- Text/JSON Server -->
+    <node name="tcp_text_server" pkg="tcp_server_ros" type="tcp_server_node" output="screen">
+        <param name="server_ip" value="0.0.0.0" />
+        <param name="server_port" value="9999" />
+        <param name="server_type" value="T" />
+    </node>
+
+    <!-- Image Server -->
+    <node name="tcp_image_server" pkg="tcp_server_ros" type="tcp_server_node" output="screen">
+        <param name="server_ip" value="0.0.0.0" />
+        <param name="server_port" value="8888" />
+        <param name="server_type" value="I" />
+    </node>
+
+    <!-- ---------------- TCP Client ---------------- -->
+    <node name="tcp_client_node" pkg="tcp_client_ros" type="tcp_client_node" output="screen">
+        <param name="server_ip" value="127.0.0.1" />
+        <param name="text_port" value="9999" />
+        <param name="image_port" value="8888" />
+        <param name="vel_port" value="9002" />
+    </node>
+</launch>

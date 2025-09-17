@@ -1,0 +1,27 @@
+<package format="2">
+  <name>tcp_server_ros</name>
+  <version>0.0.0</version>
+  <description>The tcp_server_ros package</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>BSD</license>
+
+  <!-- 基础 ROS 依赖 -->
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+
+  <!-- 图像处理相关 -->
+  <depend>sensor_msgs</depend>
+  <depend>image_transport</depend>
+  <depend>cv_bridge</depend>
+
+  <!-- 如果你有自定义消息 ObjectInfo -->
+  <depend>object_information_msgs</depend>
+
+  <!-- 可选：消息生成支持 -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+</package>
